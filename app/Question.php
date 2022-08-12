@@ -3,11 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Question extends Model
 {
     use VotableTrait;
-    
+    use HasFactory;
+ 
     protected $fillable = ['title', 'body'];
 
     protected $appends = ['created_date', 'is_favorited', 'favorites_count', 'body_html'];

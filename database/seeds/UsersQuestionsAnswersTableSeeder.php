@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+ 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,10 +21,10 @@ class UsersQuestionsAnswersTableSeeder extends Seeder
         App\User::factory()->count(3)->create()->each(function($u) {
             $u->questions()
               ->saveMany(
-                  factory(App\Question::class, rand(1, 5))->make()
+                Question::factory(rand(1, 5))->make()
               )
               ->each(function ($q) {
-                $q->answers()->saveMany(factory(App\Answer::class, rand(1, 5))->make());
+                $q->answers()->saveMany(Answer::factory(rand(1, 5))->make());
               });
         });  
     }

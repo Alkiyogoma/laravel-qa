@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "doctrine/dbal": "^2.7",
         "erusev/parsedown": "^1.7",
+        "facade/ignition": "^2.17",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^8.0",
         "laravel/helpers": "^1.0",
